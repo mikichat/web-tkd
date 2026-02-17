@@ -41,31 +41,31 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-[600px] md:h-[800px] flex items-center bg-gray-900 overflow-hidden">
+      <section className="relative h-[600px] md:h-[90vh] flex items-center bg-gray-900 overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-black/50 to-transparent z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 via-blue-900/70 to-transparent z-10 w-full md:w-3/4"></div>
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center animate-ken-burns"></div>
         </div>
         
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-white">
-          <div className="max-w-3xl animate-fade-in-up">
-            <div className="inline-block bg-red-600 text-white text-xs font-bold px-3 py-1 mb-6 rounded-sm uppercase tracking-wider">
-              Leadership & Discipline
+          <div className="max-w-4xl animate-fade-in-up pt-10 md:pt-0">
+            <div className="inline-flex items-center gap-2 bg-red-600 text-white text-sm md:text-base font-bold px-4 py-1.5 mb-8 rounded-sm uppercase tracking-wider shadow-lg">
+               <Star size={16} fill="currentColor" /> Leadership & Discipline
             </div>
-            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight tracking-tight">
               몸과 마음이<br/>
-              <span className="text-blue-400">단단해지는 시간</span>
+              <span className="text-blue-300">단단해지는 시간</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-xl font-light leading-relaxed">
-              태권도는 단순한 운동이 아닙니다.<br/>
-              예의로 시작해 예의로 끝나는 인성 교육의 장입니다.<br/>
+            <p className="text-lg md:text-2xl text-gray-200 mb-12 max-w-2xl font-light leading-relaxed">
+              태권도는 단순한 운동이 아닙니다.<br className="hidden md:block" />
+              예의로 시작해 예의로 끝나는 <span className="font-bold text-white border-b-2 border-red-500">인성 교육의 장</span>입니다.<br/>
               아이들의 자신감과 올바른 가치관을 심어주세요.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-bold text-lg transition-all shadow-lg shadow-blue-900/50 flex items-center justify-center gap-2">
-                무료 체험수업 신청
+            <div className="flex flex-col sm:flex-row gap-5">
+              <button className="px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-bold text-xl transition-all shadow-xl shadow-blue-900/50 flex items-center justify-center gap-3 group transform hover:-translate-y-1">
+                무료 체험수업 신청 <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform"/>
               </button>
-              <button className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white rounded-md font-bold text-lg transition-all backdrop-blur-sm">
+              <button className="px-10 py-5 bg-white/10 hover:bg-white/20 border border-white/30 text-white rounded-md font-bold text-xl transition-all backdrop-blur-sm">
                 교육과정 자세히보기
               </button>
             </div>
@@ -73,19 +73,19 @@ export default function Home() {
         </div>
         
         {/* Decorative Element */}
-        <div className="absolute bottom-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-600/20 to-transparent pointer-events-none"></div>
+        <div className="absolute bottom-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/10 to-transparent pointer-events-none hidden md:block"></div>
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 md:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-blue-600 font-bold tracking-wider text-sm">CORE VALUES</span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mt-2">우리가 지키는 3가지 약속</h2>
-            <div className="w-12 h-1 bg-blue-600 mx-auto mt-6"></div>
+          <div className="text-center mb-20">
+            <span className="text-blue-600 font-bold tracking-widest text-sm md:text-base uppercase">CORE VALUES</span>
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mt-3">우리가 지키는 3가지 약속</h2>
+            <div className="w-16 h-1.5 bg-blue-600 mx-auto mt-8 rounded-full"></div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
               { title: "인성 (Character)", desc: "바른 마음가짐과 예절을 가장 먼저 가르칩니다.", icon: Users, color: "text-blue-600", bg: "bg-blue-50" },
               { title: "체력 (Fitness)", desc: "기초 체력 향상과 성장 발달을 돕습니다.", icon: Award, color: "text-red-600", bg: "bg-red-50" },
